@@ -4,7 +4,7 @@
 
 https://dsllm.org
 
-A tiny, anonymous chat page for **DeepSeek V4 Flash 0731** with reasoning enabled at maximum effort. There are no accounts, registrations, app-set cookies, analytics, or database records. Conversation history lives only in the open browser tab.
+A tiny, anonymous chat page for **DeepSeek V4 Pro 0813** with reasoning enabled at maximum effort. There are no accounts, registrations, app-set cookies, analytics, or database records. Conversation history lives only in the open browser tab.
 
 The application source is licensed under **AGPL-3.0-or-later**. It uses a vanilla browser client, one small server function, native `fetch`, and a single direct development dependency: MIT-licensed Vite.
 
@@ -14,7 +14,7 @@ The server—not the browser—fixes the DeepSeek request to:
 
 ```json
 {
-  "model": "deepseek-v4-flash",
+  "model": "deepseek-v4-pro",
   "thinking": { "type": "enabled" },
   "reasoning_effort": "max",
   "stream": true,
@@ -22,7 +22,7 @@ The server—not the browser—fixes the DeepSeek request to:
 }
 ```
 
-DeepSeek's July 31, 2026 release updated the `deepseek-v4-flash` API alias to **DeepSeek-V4-Flash-0731**. `deepseek-v4-flash-0731` is not a public API identifier. See the official [release notes](https://api-docs.deepseek.com/updates/), [model list](https://api-docs.deepseek.com/api/list-models/), and [thinking-mode guide](https://api-docs.deepseek.com/guides/thinking_mode/).
+The August 13, 2026 DeepSeek release promoted **DeepSeek-V4-Pro-0813** to GA behind the `deepseek-v4-pro` API alias. `deepseek-v4-pro-0813` is not a public API identifier. See the official [release notes](https://api-docs.deepseek.com/updates/), [model list](https://api-docs.deepseek.com/api/list-models/), and [thinking-mode guide](https://api-docs.deepseek.com/guides/thinking_mode/).
 
 ## Publish with Bolt
 
@@ -65,7 +65,7 @@ The production Node server has no package dependencies: it serves `dist/` and pr
 - Model output is inserted as text, never as HTML.
 - Prompts are not logged or stored by this application. They are sent to DeepSeek and are subject to DeepSeek's own policies.
 
-The included rate limiter is only best-effort because serverless instances do not share memory. **A public, no-login AI proxy can spend your API balance. Treat a persistent gateway limit and spend cap as launch requirements.** Before sharing widely, use a dedicated API key, keep a low prepaid balance, enable monitoring, and configure a persistent rate limit at Bolt, Supabase, or another reverse proxy. Origin checks and CORS are not substitutes for rate limiting.
+The included rate limiter is only best-effort because serverless instances do not share memory. **A public, no-login AI proxy can spend your API balance. Treat a persistent gateway limit and spend cap as launch requirements.** V4 Pro is priced above V4 Flash per token, so identical traffic costs more than it did before this upgrade. Before sharing widely, use a dedicated API key, keep a low prepaid balance, enable monitoring, and configure a persistent rate limit at Bolt, Supabase, or another reverse proxy. Origin checks and CORS are not substitutes for rate limiting.
 
 ## FLOSS notes
 
@@ -74,7 +74,7 @@ The original application code is AGPLv3-or-later, Vite is MIT, and the app avoid
 Two unavoidable boundaries remain:
 
 - Bolt Cloud is a hosted proprietary service chosen for deployment. The included Node server keeps the app portable to a FLOSS host.
-- DeepSeek publishes V4 Flash model weights under the MIT license, but `api.deepseek.com` is a managed external service. The provider's service terms still apply.
+- DeepSeek publishes V4 Pro model weights under the MIT license, but `api.deepseek.com` is a managed external service. The provider's service terms still apply.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the full [GNU AGPL license](LICENSE).
 

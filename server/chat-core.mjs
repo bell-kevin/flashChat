@@ -1,5 +1,5 @@
-export const MODEL_ID = 'deepseek-v4-flash';
-export const MODEL_VERSION = 'DeepSeek-V4-Flash-0731';
+export const MODEL_ID = 'deepseek-v4-pro';
+export const MODEL_VERSION = 'DeepSeek-V4-Pro-0813';
 export const DEEPSEEK_URL = 'https://api.deepseek.com/chat/completions';
 export const MAX_MESSAGES = 24;
 export const MAX_USER_MESSAGE_CHARS = 12_000;
@@ -7,7 +7,7 @@ export const MAX_ASSISTANT_MESSAGE_CHARS = 32_000;
 export const MAX_TOTAL_CHARS = 50_000;
 export const MAX_REQUEST_BYTES = 96_000;
 
-const SYSTEM_PROMPT = `You are a helpful AI assistant powered by DeepSeek V4 Flash 0731.
+const SYSTEM_PROMPT = `You are a helpful AI assistant powered by DeepSeek V4 Pro 0813.
 Answer the user's request directly and accurately. Prefer clear, concise language, but include detail when it is useful. If you are uncertain, say so. Never invent sources or claim to have capabilities you do not have.`;
 
 export class ChatInputError extends Error {

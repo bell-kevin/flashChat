@@ -17,6 +17,6 @@ Vite's transitive build-time packages and their resolved versions are recorded i
 - Deno is available under the MIT license: <https://github.com/denoland/deno>
 - Supabase Edge Functions are based on open-source Supabase and Deno components, though a hosted service may add separate terms.
 
-## DeepSeek V4 Flash
+## DeepSeek V4 Pro
 
-DeepSeek publishes the downloadable V4 Flash weights under the MIT license in its official [model repository](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash). This app calls DeepSeek's hosted API; use of that service is governed separately and the service itself is not distributed with this project.
+DeepSeek publishes the downloadable V4 Pro weights under the MIT license in its official [model repository](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro). This app calls DeepSeek's hosted API; use of that service is governed separately and the service itself is not distributed with this project.

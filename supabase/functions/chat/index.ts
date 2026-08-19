@@ -2,7 +2,7 @@
 // Bolt/Supabase-compatible public edge function. No SDK dependency is needed.
 
 const DEEPSEEK_URL = 'https://api.deepseek.com/chat/completions';
-const MODEL_ID = 'deepseek-v4-flash'; // Currently DeepSeek-V4-Flash-0731.
+const MODEL_ID = 'deepseek-v4-pro'; // Currently DeepSeek-V4-Pro-0813.
 const MAX_REQUEST_BYTES = 96_000;
 const MAX_MESSAGES = 24;
 const MAX_USER_MESSAGE_CHARS = 12_000;
@@ -20,7 +20,7 @@ const RATE_LIMIT_RPC_TIMEOUT_MS = 2_000;
 // of removing it.
 const DEGRADED_RATE_LIMIT = 3;
 
-const SYSTEM_PROMPT = `You are a helpful AI assistant powered by DeepSeek V4 Flash 0731.
+const SYSTEM_PROMPT = `You are a helpful AI assistant powered by DeepSeek V4 Pro 0813.
 Answer the user's request directly and accurately. Prefer clear, concise language, but include detail when it is useful. If you are uncertain, say so. Never invent sources or claim to have capabilities you do not have.`;
 
 type ChatMessage = {

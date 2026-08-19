@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "AGPL-3.0-or-later",
-  "description": "A tiny anonymous DeepSeek V4 Flash 0731 chat app.",
+  "description": "A tiny anonymous DeepSeek V4 Pro 0813 chat app.",
   "scripts": {
     "source": "node scripts/create-source-bundle.mjs",
     "dev": "npm run source && node server.mjs --dev",

@@ -14,9 +14,9 @@ test('fixes the requested model, thinking mode, and max effort server-side', () 
   const messages = validateChatRequest({ messages: [{ role: 'user', content: 'Hello' }] });
   const payload = createDeepSeekPayload(messages);
 
-  assert.equal(MODEL_ID, 'deepseek-v4-flash');
-  assert.equal(MODEL_VERSION, 'DeepSeek-V4-Flash-0731');
-  assert.equal(payload.model, 'deepseek-v4-flash');
+  assert.equal(MODEL_ID, 'deepseek-v4-pro');
+  assert.equal(MODEL_VERSION, 'DeepSeek-V4-Pro-0813');
+  assert.equal(payload.model, 'deepseek-v4-pro');
   assert.deepEqual(payload.thinking, { type: 'enabled' });
   assert.equal(payload.reasoning_effort, 'max');
   assert.equal(payload.stream, true);
